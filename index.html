@@ -1,0 +1,77 @@
+<!doctype HTML>
+<html>
+<!-- A-Frame ライブラリの読み込み -->
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<!-- AR.js ライブラリの読み込み -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+<a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled: false">
+    <a-assets>
+        <a-asset-item id="blo-obj" src="model_obj/blo/blo.obj"></a-asset-item>
+        <a-asset-item id="blo-mtl" src="model_obj/blo/blo.mtl"></a-asset-item>
+    </a-assets>
+    
+    <a-assets>
+        <a-asset-item id="dn-obj" src="model_obj/denntyu/dn.obj"></a-asset-item>
+        <a-asset-item id="dn-mtl" src="model_obj/denntyu/dn.mtl"></a-asset-item>
+    </a-assets>
+    
+    <a-assets>
+        <a-asset-item id="ie-obj" src="model_obj/zyu/ie.obj"></a-asset-item>
+        <a-asset-item id="ie-mtl" src="model_obj/zyu/ie.mtl"></a-asset-item>
+    </a-assets>
+    
+     <a-assets>
+        <a-asset-item id="z2-obj" src="model_obj/ztn/z2.obj"></a-asset-item>
+        <a-asset-item id="z2-mtl" src="model_obj/ztn/z2.mtl"></a-asset-item>
+    </a-assets>
+    
+     <a-assets>
+        <a-asset-item id="car-obj" src="model_obj/car/car.obj"></a-asset-item>
+        <a-asset-item id="car-mtl" src="model_obj/car/car.mtl"></a-asset-item>
+    </a-assets>
+    
+    <a-assets>
+        <a-asset-item id="vmcn-obj" src="model_obj/vmc/vmcn.obj"></a-asset-item>
+        <a-asset-item id="vmcn-mtl" src="model_obj/vmc/vmcn.mtl"></a-asset-item>
+    </a-assets>
+    
+    <a-assets>
+        <a-asset-item id="tri-obj" src="model_obj/tri/tri.obj"></a-asset-item>
+        <a-asset-item id="tri-mtl" src="model_obj/tri/tri.mtl"></a-asset-item>
+    </a-assets>
+    
+    
+<!-- マーカーの読み込み -->
+    <a-marker preset="custom"  type="pattern" url="pattern-003.patt">
+        <a-obj-model id="blo" src="#blo-obj" mtl="#blo-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>     
+    </a-marker>
+    
+    <a-marker preset="custom"  type="pattern" url="pattern-002.patt">
+        <a-obj-model id="dn" src="#dn-obj" mtl="#dn-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+    </a-marker>
+    
+    <a-marker preset="custom"  type="pattern" url="pattern-004.patt">
+        <a-obj-model id="ie" src="#ie-obj" mtl="#ie-mtl" position="0 0 0" scale="1.5 1.5 1.5" rotation="0 0 0"></a-obj-model>
+    </a-marker>
+    
+    <a-marker preset="custom"  type="pattern" url="pattern-006.patt">
+       <a-obj-model id="car" src="#car-obj" mtl="#car-mtl" position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"></a-obj-model>
+    </a-marker>
+    
+    <a-marker preset="custom"  type="pattern" url="pattern-001.patt">
+       <a-obj-model id="vmcn" src="#vmcn-obj" mtl="#vmcn-mtl" position="0 0 0" scale="1 1 1" rotation="0 0 0"></a-obj-model>
+    </a-marker>
+    
+    <a-marker preset="custom"  type="pattern" url="pattern-005.patt">
+       <a-obj-model id="tri" src="#tri-obj" mtl="#tri-mtl" position="0 0 0" scale="1 1 1" rotation="0 0 0"></a-obj-model>
+    </a-marker>
+    
+    <a-marker preset="custom"  type="pattern" url="pattern-007.patt">
+       <a-obj-model id="z2" src="#z2-obj" mtl="#z2-mtl" position="0 0 0" scale="1.5 1.5 1.5" rotation="0 0 0"></a-obj-model>
+    </a-marker>
+    
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
